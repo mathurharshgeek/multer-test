@@ -26,7 +26,7 @@ app.post("/", upload.single("image"), (req, res) => {
     console.log(req.file);
     return res.render('show',{data:req.file.filename});
 });
-
-app.listen(80,()=>{
+var PORT=8000;
+app.listen(PORT,()=>{
     console.log("server has started");
 })
